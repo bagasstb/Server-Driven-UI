@@ -15,6 +15,7 @@
 		D0F3C81C26046EF6005DB1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F3C81A26046EF6005DB1ED /* LaunchScreen.storyboard */; };
 		D0F3C82726046EF9005DB1ED /* Server_Driven_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3C82626046EF9005DB1ED /* Server_Driven_UITests.swift */; };
 		D0F3C83226046EF9005DB1ED /* Server_Driven_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3C83126046EF9005DB1ED /* Server_Driven_UIUITests.swift */; };
+		D0F3C84A26067197005DB1ED /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F3C84926067196005DB1ED /* home.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D0F3C82D26046EF9005DB1ED /* Server-Driven-UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Server-Driven-UIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F3C83126046EF9005DB1ED /* Server_Driven_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server_Driven_UIUITests.swift; sourceTree = "<group>"; };
 		D0F3C83326046EF9005DB1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F3C84926067196005DB1ED /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D0F3C81826046EF6005DB1ED /* Assets.xcassets */,
 				D0F3C81A26046EF6005DB1ED /* LaunchScreen.storyboard */,
 				D0F3C81D26046EF6005DB1ED /* Info.plist */,
+				D0F3C84926067196005DB1ED /* home.json */,
 			);
 			path = "Server-Driven-UI";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				D0F3C81C26046EF6005DB1ED /* LaunchScreen.storyboard in Resources */,
 				D0F3C81926046EF6005DB1ED /* Assets.xcassets in Resources */,
+				D0F3C84A26067197005DB1ED /* home.json in Resources */,
 				D0F3C81726046EEE005DB1ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

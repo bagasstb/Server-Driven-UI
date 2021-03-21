@@ -1,0 +1,51 @@
+{
+    "widgets": [
+        {
+            "identifier": "BANNER",
+            "imageURLString": "url_image_to_be_downloaded"
+        },
+        {
+            "identifier": "COLLECTION",
+            "sectionTitle": "Section Title",
+            "list": [
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "title": "Title item 1",
+                    "subtitle": "Subtitle item 1"
+                },
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "title": "Title item 2",
+                    "subtitle": "Subtitle item 2"
+                },
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "title": "Title item 3",
+                    "subtitle": "Subtitle item 3"
+                }
+            ]
+        },
+        {
+            "identifier": "LIST",
+            "sectionTitle": "Section Title",
+            "list": [
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "text": "Text item 1"
+                },
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "text": "Text item 2"
+                },
+                {
+                    "imageURLString": "url_image_to_be_downloaded",
+                    "text": "Text item 3"
+                }
+            ]
+        },
+        {
+            "identifier": "BANNER",
+            "imageURLString": "url_image_to_be_downloaded"
+        }
+    ]
+}
