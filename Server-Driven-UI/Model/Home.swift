@@ -20,12 +20,27 @@ struct Widget: Unmarshaling {
     
     let identifier: String
     let sectionTitle: String?
-    let list: [[String: Any]]?
+    let sectionSubtitle: String?
+    let type: String?
+    let style: Style?
     
     init(object: MarshaledObject) throws {
         identifier = try object.value(for: "identifier")
-        sectionTitle = try object.value(for: "sectionTitle")
-        list = try object.value(for: "list")
+        sectionTitle = try object.value(for: "title")
+        sectionSubtitle = try object.value(for: "secondaryTitle")
+        type = try object.value(for: "type")
+        style = try object.value(for: "style")
+    }
+}
+
+struct Style: Unmarshaling {
+    
+    let backgroundColor: String?
+    let pictureFormat: String?
+    
+    init(object: MarshaledObject) throws {
+        backgroundColor = try object.value(for: "backgroundColor")
+        pictureFormat = try object.value(for: "pictureFormat")
     }
 }
 

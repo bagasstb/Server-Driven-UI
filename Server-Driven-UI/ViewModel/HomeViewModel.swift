@@ -9,24 +9,24 @@ import Foundation
 
 struct HomeViewModel {
   
-    var title: [String?] = []
-    let widgets: [WidgetList]
+    let title: String?
+    let subtitle: String?
+    let widget: Widgets?
+    let type: WidgetType?
     
-    init(home: Home) {
-        var collection: [WidgetList] = []
-        for widget in home.widgets {
-            let widgetId = WidgetList.init(rawValue: widget.identifier)
-            if let widgetId = widgetId {
-                collection.append(widgetId)
-                self.title.append(widget.sectionTitle)
-            }
+    init(widget: Widget) {
+        self.title = widget.sectionTitle
+        self.subtitle = widget.sectionSubtitle
+        self.widget = Widgets.init(rawValue: widget.identifier)
+        if let widgetType = widget.type {
+            self.type = WidgetType.init(rawValue: widgetType)
+        } else {
+            self.type = nil
         }
-        
-        widgets = collection
     }
 }
 
-enum WidgetList: String {
+enum Widgets: String {
     case banner = "BANNER"
     case collection = "CAROUSEL"
     case list = "LIST"
@@ -42,4 +42,10 @@ enum WidgetType: String {
     case artist = "ARTIST"
     case parent = "PARENT-WIDGET"
     case vertical = "VERTICAL"
+}
+
+enum PictureFormat: String {
+    case square = "SQUARE"
+    case rectangle = "RECTANGLE"
+    case circle = "CIRCLE"
 }

@@ -5,7 +5,7 @@
     },
     "widgets": [
         {
-            "identifier": "BANNER",
+            "identifier": "CAROUSEL",
             "type": "STANDARD",
             "path": "/banners/type/audiomix",
             "service": "inspigo-content",

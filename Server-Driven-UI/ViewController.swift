@@ -10,17 +10,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var homeTableView: UITableView!
-    fileprivate var homeViewModel: HomeViewModel?
+    fileprivate var homeModel: Home?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableInit()
-        HomeServices.shared.fetchHomeData { (home) in
+        HomeServices.shared.fetchHomeData { [weak self] (home) in
             if let home = home {
-                let homeViewModel = HomeViewModel(home: home)
-                self.homeViewModel = homeViewModel
-                self.homeTableView.reloadData()
-                print("Home Widget \(homeViewModel.widgets)")
+                self?.homeModel = home
+                self?.homeTableView.reloadData()
             }
         }
     }
@@ -38,20 +36,20 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeViewModel?.widgets.count ?? 0
+        return homeModel?.widgets.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let widget = homeViewModel?.widgets[indexPath.row]
-        let title = homeViewModel?.title[indexPath.row]
-        switch widget {
+        
+        let homeViewModel = HomeViewModel(widget: homeModel!.widgets[indexPath.row])
+        switch homeViewModel.widget {
         case .banner:
             let cell = tableView.dequeueReusableCell(withIdentifier: BannerTableViewCell.cellIdentifier, for: indexPath) as! BannerTableViewCell
             cell.configure(with: title ?? "")
             return cell
         case .collection:
             let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.cellIdentifier, for: indexPath) as! CollectionTableViewCell
-            cell.configure(with: title ?? "")
+            cell.configure(with: homeViewModel)
             return cell
         case .list:
             let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellIdentifier, for: indexPath) as! ListTableViewCell
@@ -65,8 +63,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let widget = homeViewModel?.widgets[indexPath.row]
-        let title = homeViewModel?.title[indexPath.row]
+        let widget = Widgets.init(rawValue: homeModel?.widgets[indexPath.row].identifier ?? "")
+        let title = homeModel?.widgets[indexPath.row].sectionTitle
         switch widget {
         case .banner:
             if title == nil {
@@ -75,7 +73,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 return .init(180)
             }
         case .collection:
-            return .init(200)
+            return (title == nil) ? .init(200) : .init(230)
         case .list:
             return .init(400)
         case .none:
