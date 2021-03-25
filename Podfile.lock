@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Marshal (1.2.7)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Marshal
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Marshal
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 0da1708bb5b1bc21e5f0b9c4e2147a80db8ad9dc
+
+COCOAPODS: 1.9.3
