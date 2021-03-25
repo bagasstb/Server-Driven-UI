@@ -1,51 +1,135 @@
 {
+    "identifier": "PARENT-WIDGET",
+    "style": {
+        "backgroundColor": "#FFFFFF"
+    },
     "widgets": [
         {
             "identifier": "BANNER",
-            "imageURLString": "url_image_to_be_downloaded"
+            "type": "STANDARD",
+            "path": "/banners/type/audiomix",
+            "service": "inspigo-content",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "pictureFormat": "SQUARE"
+            }
         },
         {
-            "identifier": "COLLECTION",
-            "sectionTitle": "Section Title",
-            "list": [
+            "identifier": "BANNER",
+            "type": "BULLET",
+            "path": "/banners/type/promo",
+            "service": "inspigo-content",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "pictureFormat": "RECTANGLE"
+            }
+        },
+        {
+            "identifier": "CAROUSEL",
+            "type": "ORGANIZATION",
+            "title": "Inspigo",
+            "secondaryTitle": "Album podcast pilihan Inspigo",
+            "style": {
+                "backgroundColor": "#000000",
+                "fontColor": "#FFFFFF",
+                "pictureFormat": "SQUARE"
+            },
+            "path": "/albums/organization",
+            "service": "inspigo-content",
+            "logo": "book",
+            "canViewAll": true
+        },
+        {
+            "identifier": "CAROUSEL",
+            "type": "COMPLETE",
+            "title": "New Podcast",
+            "secondaryTitle": "Cerita menarik dari setiap podcast di Inspigo",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontColor": "#000000",
+                "pictureFormat": "SQUARE"
+            },
+            "path": "/albums/new-release",
+            "service": "inspigo-content",
+            "logo": "mic",
+            "canViewAll": false
+        },
+        {
+            "identifier": "CAROUSEL",
+            "type": "STORY",
+            "title": "Inspistory",
+            "secondaryTitle": "Cerita menarik dari setiap podcast di Inspigo",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "pictureFormat": "CIRCLE"
+            },
+            "path": "/inspistories",
+            "service": "inspigo-content",
+            "logo": "book",
+            "canViewAll": false
+        },
+        {
+            "identifier": "CAROUSEL",
+            "type": "PLAYLIST",
+            "title": "Inspigo Playlist",
+            "secondaryTitle": "Album podcast pilihan Inspigo",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "pictureFormat": "SQUARE"
+            },
+            "path": "/playlists",
+            "service": "inspigo-content",
+            "logo": "headphone",
+            "canViewAll": true
+        },
+        {
+            "identifier": "PARENT-WIDGET",
+            "style": {
+                "backgroundColor": "#000000"
+            },
+            "widgets": [
                 {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "title": "Title item 1",
-                    "subtitle": "Subtitle item 1"
+                    "identifier": "CAROUSEL",
+                    "type": "PLAYBOOK",
+                    "title": "Audio Playbook",
+                    "secondaryTitle": "Akses pengetahuan lebih lengkap dengan audio playbook",
+                    "style": {
+                        "backgroundColor": "#000000",
+                        "pictureFormat": "RECTANGLE"
+                    },
+                    "path": "/albums",
+                    "service": "inspigo-content",
+                    "logo": "store",
+                    "canViewAll": false
                 },
                 {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "title": "Title item 2",
-                    "subtitle": "Subtitle item 2"
-                },
-                {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "title": "Title item 3",
-                    "subtitle": "Subtitle item 3"
+                    "identifier": "CAROUSEL",
+                    "type": "ARTIST",
+                    "title": "Inspicreator",
+                    "secondaryTitle": "",
+                    "style": {
+                        "backgroundColor": "#000000",
+                        "pictureFormat": "CIRCLE|RECTANGLE|SQUARE"
+                    },
+                    "path": "/artists",
+                    "service": "inspigo-content",
+                    "logo": "",
+                    "canViewAll": true
                 }
             ]
         },
         {
             "identifier": "LIST",
-            "sectionTitle": "Section Title",
-            "list": [
-                {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "text": "Text item 1"
-                },
-                {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "text": "Text item 2"
-                },
-                {
-                    "imageURLString": "url_image_to_be_downloaded",
-                    "text": "Text item 3"
-                }
-            ]
-        },
-        {
-            "identifier": "BANNER",
-            "imageURLString": "url_image_to_be_downloaded"
+            "type": "VERTICAL",
+            "title": "Inspiarticle",
+            "secondaryTitle": "Artikel seru dengan berbagai topik.",
+            "path": "/articles",
+            "service": "inspigo-content",
+            "style": {
+                "backgroundColor": "#FFFFFF",
+                "border": "SQUARE"
+            },
+            "canViewAll": true
         }
     ]
 }
